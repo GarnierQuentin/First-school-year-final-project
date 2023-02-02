@@ -1,0 +1,68 @@
+#do_a_post{
+    position: sticky;
+    background-color: aliceblue;
+    border-radius: 1000px;
+    width: 5vw;
+    height: 5vw;
+    padding: 3%;
+    top: 80%;
+    left: 70%;
+}
+
+#do_a_post img{
+    width: 100%;
+    height: 100%;
+} 
+
+#do_a_post :hover{
+    cursor: pointer;
+}
+
+.post{
+    border: 5px solid black;
+    border-radius: 50px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    padding: 3%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.identity{
+    display: flex;
+    align-items: center;
+}
+
+.nameOfTag{
+    text-align: start;
+    margin-top: 5%;
+}
+
+.text{
+    text-align: start;
+    margin-top: 5%;
+}
+
+.image{
+    margin-top: 5%;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.delet{
+    width: 10%;
+}
+
+.delet img{
+    width: 100%;
+    height: 100%; 
+}

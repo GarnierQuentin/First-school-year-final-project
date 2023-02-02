@@ -1,0 +1,27 @@
+#settings{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: grey;
+}
+
+#reglages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bloc{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#dark_theme{
+    border-radius: 1000px;
+    width: 15%;
+}
+
+#white_theme{
+    border-radius: 1000px;
+    width: 15%;
+}

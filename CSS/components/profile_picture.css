@@ -1,0 +1,32 @@
+.profile_picture img{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1000px;
+}
+
+.profile_picture{
+    border: 5px solid black;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo{
+    object-fit: cover;
+}
+
+.mini_profile_picture{
+    border: 5px solid black;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 1000px;
+    margin-right: 10px;
+}
+
+.mini_profile_picture img{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1000px;
+}

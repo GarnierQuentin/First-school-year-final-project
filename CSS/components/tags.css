@@ -1,0 +1,112 @@
+#tag1{
+    background-color: #FBABD6;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag2{
+    background-color: #FC93A6;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag3{
+    background-color: #FEAE85;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag4{
+    background-color: #FFD2C1;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag5{
+    background-color: #46EAB0;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag6{
+    background-color: #5BC7D0;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag7{
+    background-color: #C3FEF1;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag8{
+    background-color: #ACC5FC;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag9{
+    background-color: #C2E7FF;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#tag10{
+    background-color: #EEF8FF;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+}
+
+#clear{
+    background-color: black;
+    color: whitesmoke;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border: 3px solid whitesmoke;
+    border-radius: 100px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}

@@ -1,0 +1,28 @@
+#main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: grey;
+}
+
+.menu{
+    box-shadow: rgb(0, 0, 0) 1px 0px 50px;
+    min-height: 100vh;
+}
+
+.menu_content{
+    position: sticky;
+    top: 3%;
+}
+
+#tags_content{
+    position: sticky;
+    top: 3%;
+}
+
+#posts{
+    box-shadow: rgb(0, 0, 0) 1px 0px 50px;
+}
+
+#tags{
+    box-shadow: rgb(0, 0, 0) 1px 0px 50px;
+}
