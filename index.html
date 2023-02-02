@@ -9,26 +9,8 @@
 </head>
 <body>
 
-    <div id="delet">
-
-        <div id="question">
-        Êtes-vous sûr de vouloir supprimer ce post ?
-        </div>
-
-        <br>
-
-        <div id="choix">
-            <div id="yes">
-                Oui
-            </div>
-            <div id="no">
-                Non
-            </div>
-        </div>
-
-    </div>
-
     <div id="main">
+        
         <div class="menu">
 
             <div class="menu_content">
@@ -70,12 +52,6 @@
         <div id="posts">
 
             <div id="post_content">
-
-                <div id="do_a_post">
-
-                    <img src="assets/icones/plume-doie.png" alt="">
-
-                </div>
 
                 <div class="post">
 
@@ -223,8 +199,73 @@
                 
             </div>
 
-            <div class="gap">
+            <div id="delet">
 
+                <div id="question">
+                Êtes-vous sûr de vouloir supprimer ce post ?
+                </div>
+        
+                <br>
+        
+                <div id="choix">
+                    <div id="yes">
+                        Oui
+                    </div>
+                    <div id="no">
+                        Non
+                    </div>
+                </div>
+        
+            </div>
+
+            <div id="do_a_post">
+
+                <img src="assets/icones/plume-doie.png" alt="">
+
+            </div>
+
+            <div id="publish">
+
+                <div id="text_input">
+        
+                    Tapez votre commentaire (en moins de 100 caractères) :
+                    <textarea name="textarea" id="content_text_input" maxlength="100"></textarea>
+        
+                </div>
+        
+        
+                <div id="roll_of_tags">
+                
+                    <select name="tags" id="liste_tags">
+        
+                        <option value="Base">Choisissez un tag</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Jeux vidéo">Jeux Vidéo</option>
+                        <option value="Histoire">Histoire</option>
+                        <option value="Cinema">Cinéma</option>
+                        <option value="Litterature">Littérature</option>
+                        <option value="Tech">Tech</option>
+                        <option value="Musique">Musique</option>
+                        <option value="Politique">Politique</option>
+                        <option value="Sondage">Sondage</option>
+        
+                    </select>
+        
+                    <div id="final_submit_part">
+        
+                        <div id="cancel_button">
+                            Annuler
+                        </div>
+        
+                        <div id="submit_button">
+                            Publier
+                        </div>
+        
+                    </div>
+            
+                </div>
+        
             </div>
 
         </div>
@@ -289,6 +330,7 @@
 
         </div>
     </div>
+    
     <script src="JavaScript/main.js"></script>
 </body>
 </html>

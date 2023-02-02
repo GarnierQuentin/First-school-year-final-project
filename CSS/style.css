@@ -7,6 +7,7 @@
 @import url(components/main.css);
 @import url(components/settings.css);
 @import url(components/delet.css);
+@import url(components/publish.css);
 
 *{
     padding: 0%;
@@ -14,4 +15,8 @@
     font-size: 2vw;
     text-align: center;
     font-family: "Montserrat", sans-serif;
+}
+
+li{
+    list-style: none;
 }
