@@ -1,16 +1,46 @@
-const dark_theme = document.querySelector('#dark_theme')
-const white_theme = document.querySelector('#white_theme')
-console.log(dark_theme)
-console.log(white_theme)
+const poubelle = document.querySelector(".trash")
+const menu_delet = document.querySelector("#delet")
 
-const settings = document.querySelector('#settings')
-console.log(settings)
+const yes = document.querySelector("#yes")
+const no = document.querySelector("#no")
 
-white_theme.addEventListener('click', () => {
-    settings.style.backgroundColor = "whitesmoke"
-    settings.style.transition = "all 1s"
+console.log(poubelle)
+console.log(menu_delet)
+
+poubelle.addEventListener('click', () => {
+    menu_delet.style.display = "block"
 })
 
-dark_theme.addEventListener('click', () => {
-    settings.style.backgroundColor = "grey"
+no.addEventListener("click", () => {
+    menu_delet.style.display = "none"
 })
+
+yes.addEventListener("click", () => {
+    removePostByTrash(poubelle)
+    menu_delet.style.display = "none"
+})
+
+const removePostByTrash = (trash) => {
+    const profile = trash.parentNode
+    console.log(profile)
+
+    const post = profile.parentNode
+    console.log(post)
+
+    const childNodes = post.childNodes
+    console.log(childNodes)
+    
+    const nameOfTag = post.querySelector(".nameOfTag")
+
+    const text = post.querySelector(".text")
+
+    const image = post.querySelector(".image")
+
+    post.removeChild(profile)
+    post.removeChild(nameOfTag)
+    post.removeChild(text)
+    post.removeChild(image)
+    post.remove()
+    console.log(`child Nodes : ${childNodes}`)
+
+}
