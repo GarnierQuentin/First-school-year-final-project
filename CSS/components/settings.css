@@ -14,14 +14,19 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    font-size: 3vw;
 }
 
 #dark_theme{
     border-radius: 1000px;
-    width: 15%;
+    width: 25%;
+    border-radius: 1000px;
+    font-size: 3vw;
 }
 
 #white_theme{
     border-radius: 1000px;
-    width: 15%;
+    width: 25%;
+    border-radius: 1000px;
+    font-size: 3vw;
 }
