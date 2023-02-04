@@ -87,7 +87,30 @@ cancel_button.addEventListener("click", () => {
 })
 
 publish_button.addEventListener("click", () => {
-    console.log("pas encore dans la condition")
+
+    if(text_tag === "Choisissez un tag"){
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                tag.style.backgroundColor = "red"
+            },500 * i)
+            // 0 2 4
+            
+            setTimeout(() => {
+                tag.style.backgroundColor = "black"
+            },250 + 500 * i)
+            // 1 3 5
+          }
+    }
+
+    else if(text_post === ""){
+        setInterval(() => {
+            textarea.style.animation = "trembler 1s"
+        })
+        textarea.style.animation = "none"
+    }
+
+    else{
+        console.log("pas encore dans la condition")
         console.log("la fenêtre doit se fermer")
         feed.insertAdjacentHTML("afterbegin", `<div class="post">
 
@@ -125,5 +148,5 @@ publish_button.addEventListener("click", () => {
 
     </div>`)
     publish.style.display = "none"
-    
+    }
 })
