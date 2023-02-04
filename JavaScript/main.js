@@ -1,5 +1,14 @@
+let theme = localStorage.getItem("actual_theme")
+
+const clear_button = document.getElementById("clear")
+const settings = document.getElementById("settings")
+const main = document.getElementById("main")
+
 const poubelle = document.querySelector(".trash")
 const menu_delet = document.querySelector("#delet")
+
+const bouton = document.querySelector(".bouton")
+const connection = document.querySelector(".connection")
 
 const yes = document.querySelector("#yes")
 const no = document.querySelector("#no")
@@ -150,3 +159,24 @@ publish_button.addEventListener("click", () => {
     publish.style.display = "none"
     }
 })
+
+
+
+console.log(theme)
+if(theme === "white"){
+    clear_button.style.backgroundColor = "whitesmoke"
+    clear_button.style.color = "black"
+    clear_button.style.border = "3px solid black"
+    publish.style.backgroundColor = "grey"
+    textarea.style.backgroundColor = "whitesmoke"
+    textarea.style.color = "grey"
+    tag.style.backgroundColor = "white"
+    tag.style.backgroundColor = "black"
+    do_a_post.style.backgroundColor = "grey"
+    main.style.backgroundColor = "whitesmoke"
+    menu_delet.style.backgroundColor = "grey"
+    yes.style.backgroundColor = "whitesmoke"
+    no.style.backgroundColor = "whitesmoke"
+    bouton.style.backgroundColor = "grey"
+    connection.style.backgroundColor = "grey"
+}
