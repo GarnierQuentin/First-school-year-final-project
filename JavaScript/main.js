@@ -182,3 +182,56 @@ if(theme === "white"){
     });
     connection.style.backgroundColor = "grey"
 }
+
+
+const liste_posts = document.querySelectorAll(".post")
+console.log(`liste des posts : ${liste_posts}`)
+
+liste_posts.forEach(element => {
+    console.log(`liste des posts : ${element.innerHTML}`)
+});
+
+const sport = document.getElementById("Sport")
+const culture = document.getElementById("Culture")
+const video_game = document.getElementById("video_game")
+const histoire = document.getElementById("Histoire")
+const cinema = document.getElementById("Cinema")
+const litterature = document.getElementById("Litterature")
+const tech = document.getElementById("Tech")
+const musique = document.getElementById("Musique")
+const anime = document.getElementById("Anime")
+const sondage = document.getElementById("Sondage")
+
+const clear = document.getElementById("clear")
+
+const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, litterature, tech, musique, anime, sondage]
+
+liste_of_selected_tags.forEach(tag_name => {
+    tag_name.addEventListener("click", () => {
+        liste_posts.forEach(actual_post => {
+            const nameOfTag = actual_post.childNodes[3].textContent
+            console.log(`Le tag du poste actuel : ${nameOfTag}`)
+            if(nameOfTag != `#${tag_name.textContent}`){
+                actual_post.style.display = "none"
+            }
+        });
+    })
+});
+
+clear.addEventListener("click", () => {
+    liste_posts.forEach(element => {
+        element.style.display = "block"
+    });
+})
+
+//anime.addEventListener("click", () => {
+//    console.log(anime.textContent)
+//    liste_posts.forEach(actual_post => {
+//        const nameOfTag = actual_post.childNodes[3].textContent
+//        console.log(`nameOfTage : ${nameOfTag}`)
+//        console.log(`anime : ${typeof anime.textContent}`)
+//        if(nameOfTag != `#${anime.textContent}`){
+//            actual_post.style.display = "none"
+//        }
+//    });
+//})
