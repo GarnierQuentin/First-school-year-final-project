@@ -4,8 +4,27 @@ const clear_button = document.getElementById("clear")
 const settings = document.getElementById("settings")
 const main = document.getElementById("main")
 
-const poubelle = document.querySelector(".trash")
+const poubelle = document.querySelectorAll(".trash")
 const menu_delet = document.querySelector("#delet")
+
+poubelle.forEach(element => {
+    console.log(poubelle)
+    const actual_poubelle = element.innerHTML
+    console.log(`poubelle actuelle : ${actual_poubelle}`)
+    element.addEventListener('click', () => {
+        console.log("détecte le clique")
+        menu_delet.style.display = "block"
+
+        no.addEventListener("click", () => {
+            menu_delet.style.display = "none"
+        })
+        
+        yes.addEventListener("click", () => {
+            removePostByTrash(element)
+            menu_delet.style.display = "none"
+        })
+    })
+})
 
 const boutons = document.querySelectorAll(".bouton")
 const connection = document.querySelector(".connection")
@@ -13,42 +32,7 @@ const connection = document.querySelector(".connection")
 const yes = document.querySelector("#yes")
 const no = document.querySelector("#no")
 
-console.log(poubelle)
 console.log(menu_delet)
-
-poubelle.addEventListener('click', () => {
-    menu_delet.style.display = "block"
-})
-
-no.addEventListener("click", () => {
-    menu_delet.style.display = "none"
-})
-
-yes.addEventListener("click", () => {
-    removePostByTrash(poubelle)
-    menu_delet.style.display = "none"
-})
-
-const removePostByTrash = (trash) => {
-    const profile = trash.parentNode
-    console.log(profile)
-
-    const post = profile.parentNode
-    console.log(post)
-    
-    const nameOfTag = post.querySelector(".nameOfTag")
-
-    const text = post.querySelector(".text")
-
-    const image = post.querySelector(".image")
-
-    post.removeChild(profile)
-    post.removeChild(nameOfTag)
-    post.removeChild(text)
-    post.removeChild(image)
-    post.remove()
-
-}
 
 
 const do_a_post = document.getElementById("do_a_post")
@@ -119,8 +103,6 @@ publish_button.addEventListener("click", () => {
     }
 
     else{
-        console.log("pas encore dans la condition")
-        console.log("la fenêtre doit se fermer")
         feed.insertAdjacentHTML("afterbegin", `<div class="post">
 
         <div class="profile">
@@ -157,8 +139,53 @@ publish_button.addEventListener("click", () => {
 
     </div>`)
     publish.style.display = "none"
+
+    const poubelle = document.querySelectorAll(".trash")
+
+    poubelle.forEach(element => {
+        console.log(poubelle)
+        const actual_poubelle = element.innerHTML
+        console.log(`poubelle actuelle : ${actual_poubelle}`)
+        element.addEventListener('click', () => {
+            console.log("détecte le clique")
+            menu_delet.style.display = "block"
+    
+            no.addEventListener("click", () => {
+                menu_delet.style.display = "none"
+            })
+            
+            yes.addEventListener("click", () => {
+                removePostByTrash(element)
+                menu_delet.style.display = "none"
+            })
+        })
+    })
     }
+
+
 })
+
+
+
+const removePostByTrash = (trash) => {
+    const profile = trash.parentNode
+    console.log(profile)
+
+    const post = profile.parentNode
+    console.log(post)
+    
+    const nameOfTag = post.querySelector(".nameOfTag")
+
+    const text = post.querySelector(".text")
+
+    const image = post.querySelector(".image")
+
+    post.removeChild(profile)
+    post.removeChild(nameOfTag)
+    post.removeChild(text)
+    post.removeChild(image)
+    post.remove()
+}
 
 
 
