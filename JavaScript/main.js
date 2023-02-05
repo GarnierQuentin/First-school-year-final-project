@@ -183,14 +183,6 @@ if(theme === "white"){
     connection.style.backgroundColor = "grey"
 }
 
-
-const liste_posts = document.querySelectorAll(".post")
-console.log(`liste des posts : ${liste_posts}`)
-
-liste_posts.forEach(element => {
-    console.log(`liste des posts : ${element.innerHTML}`)
-});
-
 const sport = document.getElementById("Sport")
 const culture = document.getElementById("Culture")
 const video_game = document.getElementById("video_game")
@@ -208,10 +200,11 @@ const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, li
 
 liste_of_selected_tags.forEach(tag_name => {
     tag_name.addEventListener("click", () => {
+        const liste_posts = document.querySelectorAll(".post")
         liste_posts.forEach(actual_post => {
             const nameOfTag = actual_post.childNodes[3].textContent
             console.log(`Le tag du poste actuel : ${nameOfTag}`)
-            if(nameOfTag != `#${tag_name.textContent}`){
+            if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){ //.trim() efface les espaces inutiles qui faisaient rater la condition
                 actual_post.style.display = "none"
             }
         });
@@ -219,6 +212,7 @@ liste_of_selected_tags.forEach(tag_name => {
 });
 
 clear.addEventListener("click", () => {
+    const liste_posts = document.querySelectorAll(".post")
     liste_posts.forEach(element => {
         element.style.display = "block"
     });
