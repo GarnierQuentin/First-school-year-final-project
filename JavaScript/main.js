@@ -7,7 +7,7 @@ const main = document.getElementById("main")
 const poubelle = document.querySelector(".trash")
 const menu_delet = document.querySelector("#delet")
 
-const bouton = document.querySelector(".bouton")
+const boutons = document.querySelectorAll(".bouton")
 const connection = document.querySelector(".connection")
 
 const yes = document.querySelector("#yes")
@@ -177,6 +177,8 @@ if(theme === "white"){
     menu_delet.style.backgroundColor = "grey"
     yes.style.backgroundColor = "whitesmoke"
     no.style.backgroundColor = "whitesmoke"
-    bouton.style.backgroundColor = "grey"
+    boutons.forEach(element => {
+        element.style.backgroundColor = "grey"
+    });
     connection.style.backgroundColor = "grey"
 }

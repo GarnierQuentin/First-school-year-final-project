@@ -32,6 +32,18 @@
     margin-top: 16vh;
 }
 
+.connection_clicked{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid aliceblue;
+    padding: 3%;
+    margin-top: 16vh;
+}
+
 .bouton :hover{
     cursor: pointer;
 }

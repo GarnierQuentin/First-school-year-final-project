@@ -8,6 +8,7 @@
 @import url(components/settings.css);
 @import url(components/delet.css);
 @import url(components/publish.css);
+@import url(components/connection.css);
 
 *{
     padding: 0%;
