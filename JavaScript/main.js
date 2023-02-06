@@ -231,6 +231,7 @@ liste_of_selected_tags.forEach(tag_name => {
         liste_posts.forEach(actual_post => {
             const nameOfTag = actual_post.childNodes[3].textContent
             console.log(`Le tag du poste actuel : ${nameOfTag}`)
+            actual_post.style.display = "block"
             if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){ //.trim() efface les espaces inutiles qui faisaient rater la condition
                 actual_post.style.display = "none"
             }
