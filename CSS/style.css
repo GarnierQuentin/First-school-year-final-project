@@ -21,3 +21,9 @@
 li{
     list-style: none;
 }
+
+@media(max-width : 810px){
+    *{
+        font-size: 4vw;
+    }
+}

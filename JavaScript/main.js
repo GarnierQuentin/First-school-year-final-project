@@ -234,6 +234,7 @@ liste_of_selected_tags.forEach(tag_name => {
             actual_post.style.display = "block"
             if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){ //.trim() efface les espaces inutiles qui faisaient rater la condition
                 actual_post.style.display = "none"
+                actual_post.style.backgroundColor = tag_name.style.backgroundColor
             }
         });
     })
@@ -243,17 +244,56 @@ clear.addEventListener("click", () => {
     const liste_posts = document.querySelectorAll(".post")
     liste_posts.forEach(element => {
         element.style.display = "block"
+        element.style.backgroundColor = "none"
     });
 })
 
-//anime.addEventListener("click", () => {
-//    console.log(anime.textContent)
-//    liste_posts.forEach(actual_post => {
-//        const nameOfTag = actual_post.childNodes[3].textContent
-//        console.log(`nameOfTage : ${nameOfTag}`)
-//        console.log(`anime : ${typeof anime.textContent}`)
-//        if(nameOfTag != `#${anime.textContent}`){
-//            actual_post.style.display = "none"
-//        }
-//    });
-//})
+
+
+
+//RESPONSIVE PART (MOBILE)
+
+
+const general_posts = document.getElementById("posts")
+
+
+const mobile_burger = document.getElementById("burger_menu")
+const mobile_tag_menu = document.getElementById("mobile_tag_menu")
+const mobile_post = document.getElementById("mobile_post")
+
+const menu = document.querySelector(".menu")
+const tag_page = document.getElementById("tags")
+
+mobile_burger.addEventListener("click", () => {
+    if(menu.style.display == "none"){
+        menu.style.display = "block"
+        mobile_tag_menu.style.visibility = "hidden"
+        mobile_post.style.visibility = "hidden"
+    }
+    else{
+        menu.style.display = "none"
+        mobile_tag_menu.style.visibility = "visible"
+        mobile_post.style.visibility = "visible"
+    }
+})
+
+mobile_tag_menu.addEventListener("click", () => {
+    if(tag_page.style.display == "none"){
+        tag_page.style.display = "block"
+        general_posts.style.display = "none"
+        mobile_burger.style.visibility = "hidden"
+        mobile_post.style.visibility = "hidden"
+        mobile_tag_menu.innerHTML = `<img src="assets/icones/etiqueté.png" alt="">`
+    }
+    else{
+        tag_page.style.display = "none"
+        mobile_burger.style.visibility = "visible"
+        mobile_post.style.visibility = "visible"
+        general_posts.style.display = "block"
+        mobile_tag_menu.innerHTML = `<img src="assets/icones/etiqueter.png" alt="">`
+    }
+})
+
+mobile_post.addEventListener("click", () => {
+    publish.style.display = "block"
+})

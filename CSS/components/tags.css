@@ -110,3 +110,75 @@
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
+
+@media(max-width : 810px){
+    #Sport{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Culture{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #video_game{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Histoire{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Cinema{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Litterature{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Tech{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Musique{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Anime{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    
+    #Sondage{
+        border: 5px solid black;
+        margin-top: 3vh;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
