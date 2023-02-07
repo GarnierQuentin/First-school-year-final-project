@@ -30,3 +30,17 @@
     max-height: 100%;
     border-radius: 1000px;
 }
+
+
+
+@media(max-width:810px){
+    .profile_picture{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .mini_profile_picture{
+        width: 12vw;
+        height: 12vw;
+    }
+}

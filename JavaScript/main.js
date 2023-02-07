@@ -269,11 +269,13 @@ mobile_burger.addEventListener("click", () => {
         menu.style.display = "block"
         mobile_tag_menu.style.visibility = "hidden"
         mobile_post.style.visibility = "hidden"
+        general_posts.style.display = "none"
     }
     else{
         menu.style.display = "none"
         mobile_tag_menu.style.visibility = "visible"
         mobile_post.style.visibility = "visible"
+        general_posts.style.display = "block"
     }
 })
 
