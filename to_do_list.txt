@@ -1,0 +1,16 @@
+ajouter les dates et peut etre les likes sur les posts
+
+
+créer la fonction de suppression des posts
+
+
+faire les filtres (aménager en PHP ?)
+
+
+faire des animations quand on rentre sur le site
+
+
+adapter le CSS aprce que là ça va vraiment pas
+
+
+faire le reponsive en mode tel et checker les breakpoints

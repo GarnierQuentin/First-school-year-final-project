@@ -1,101 +1,41 @@
 #Sport{
     background-color: #FBABD6;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Culture{
     background-color: #FC93A6;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #video_game{
     background-color: #FEAE85;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Histoire{
     background-color: #FFD2C1;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Cinema{
     background-color: #46EAB0;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Litterature{
     background-color: #5BC7D0;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Tech{
     background-color: #C3FEF1;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Musique{
     background-color: #ACC5FC;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Anime{
     background-color: #C2E7FF;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #Sondage{
     background-color: #EEF8FF;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
 }
 
 #clear{
@@ -111,71 +51,18 @@
     padding-bottom: 3vh;
 }
 
+.tag_choice{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 2vh;
+    height: 50%;
+}
+
 @media(max-width : 810px){
-    #Sport{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Culture{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #video_game{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Histoire{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Cinema{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Litterature{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Tech{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Musique{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Anime{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-    
-    #Sondage{
+    .tag_choice{
         border: 5px solid black;
         margin-top: 3vh;
         padding-top: 3%;
