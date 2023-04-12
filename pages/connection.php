@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
+    $_SESSION["user"] = null;
+    $_SESSION["id"] = null;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,10 +27,10 @@
             <div class="menu_content">
             
                 <div class="profile_picture">
-                    <img class="photo" src="../assets/photos de profile/yugo_TP.jpg" alt="photo de profile">
+                    <img class="photo" src="../assets/photos de profile/not_connected.jpg" alt="photo de profile">
                 </div>
 
-                <p class="username">Quentin</p>
+                <p class="username">Not connected</p>
 
                 <div class="gap"></div>
 

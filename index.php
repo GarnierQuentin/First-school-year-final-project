@@ -26,17 +26,43 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             <div class="menu_content">
             
+                <?php
+                if(!isSet($_SESSION["user"])){
+                ?>
+                <div class="profile_picture">
+                    <img class="photo" src="assets/photos de profile/not_connected.jpg" alt="photo de profile">
+                </div>
+
+                <p>Not connected</p>
+                <?php
+
+                }else{
+                ?>
                 <div class="profile_picture">
                     <img class="photo" src=<?php echo $_SESSION["user"]["profile_picture"]; ?> alt="photo de profile">
                 </div>
 
                 <p class="username"><?php echo $_SESSION["user"]["pseudo"]; ?></p>
+                <?php
+                }?>
 
                 <div class="gap"></div>
 
                 <div class="clicked">
                     Feed
                 </div>
+
+                <?php
+                if(isSet($_SESSION["user"])){
+                ?>
+
+                <a href="pages/profile.php">
+                    <div class="bouton">
+                        Profile
+                    </div>
+                </a>
+                <?php
+                }?>
                 
                 <a href="pages/settings.php">
                     <div class="bouton">
@@ -56,7 +82,16 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
         <div id="posts">
 
-            <div id="post_content">
+            <?php
+            if(!isSet($_SESSION["user"])){
+                $connected = "is_not_connected";
+            }
+            else{
+                $connected = "is_connected";
+            }
+            ?>
+
+            <div id="post_content" value=<?php echo $connected; ?>>
 
             <?php
 
@@ -96,11 +131,11 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
                         </div>
 
-                        <div class="trash">
+                        <div class="trash" id=<?php echo $post["id"]; ?>>
                             <?php
                             if($_SESSION['id'] == $post['user_id']){ //si le post appartient à l'utilisateur connecté
                             ?>
-                            <img src="assets/icones/poubelle.png" alt="">
+                                <img src="assets/icones/poubelle.png" alt="bouton de suppression de post">
                             <?php
                             }?>
                         </div>
@@ -135,7 +170,10 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
         
                 <div id="choix">
                     <div id="yes">
-                        Oui
+                        <form action="proccess/delet.php" method="POST">
+                            <input type="submit" value="Oui" style="background : none; border : none;">
+                            <input id="input_yes_form" type="hidden" name="current_post_ID" value="">
+                        </form>
                     </div>
                     <div id="no">
                         Non
@@ -188,7 +226,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                             </div>
             
                             <div id="submit_button">
-                                <input type="submit" placeholder="Publier" style="background : none; border : none;">
+                                <input type="submit" value="Publier" style="background : none; border : none;">
                             </div>
             
                         </div>

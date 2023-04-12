@@ -6,21 +6,18 @@ const main = document.getElementById("main")
 
 const poubelle = document.querySelectorAll(".trash")
 const menu_delet = document.querySelector("#delet")
+const validation_button = document.getElementById("input_yes_form")
 
-poubelle.forEach(element => {
-    console.log(poubelle)
-    const actual_poubelle = element.innerHTML
-    console.log(`poubelle actuelle : ${actual_poubelle}`)
+poubelle.forEach(element => { //poubelle étant la liste de toutes les images de suppression de post
     element.addEventListener('click', () => {
-        console.log("détecte le clique")
+        console.log("l'id actuel de la poublle sélectionnée")
+        console.log(element.id)
+        validation_button.value = element.id
         menu_delet.style.display = "block"
-
         no.addEventListener("click", () => {
             menu_delet.style.display = "none"
         })
-        
         yes.addEventListener("click", () => {
-            removePostByTrash(element)
             menu_delet.style.display = "none"
         })
     })
@@ -103,63 +100,8 @@ publish_button.addEventListener("click", () => {
     }
 
     else{
-        feed.insertAdjacentHTML("afterbegin", `<div class="post">
 
-        <div class="profile">
-
-            <div class="identity">
-
-                <div class="mini_profile_picture">
-                    <img class="photo" src="assets/photos de profile/yugo_TP.jpg" alt="mini photo de profile">
-                </div>
-
-                <div class="username">
-                    Quentin
-                </div>
-
-            </div>
-
-            <div class="trash">
-                <img src="assets/icones/poubelle.png" alt="">
-            </div>
-
-        </div>
-
-        <div class="nameOfTag">
-            #${text_tag}
-        </div>
-
-        <div class="text">
-            ${text_post}
-        </div>
-
-        <div class="image">
-            
-        </div>
-
-    </div>`)
     publish.style.display = "none"
-
-    const poubelle = document.querySelectorAll(".trash")
-
-    poubelle.forEach(element => {
-        console.log(poubelle)
-        const actual_poubelle = element.innerHTML
-        console.log(`poubelle actuelle : ${actual_poubelle}`)
-        element.addEventListener('click', () => {
-            console.log("détecte le clique")
-            menu_delet.style.display = "block"
-    
-            no.addEventListener("click", () => {
-                menu_delet.style.display = "none"
-            })
-            
-            yes.addEventListener("click", () => {
-                removePostByTrash(element)
-                menu_delet.style.display = "none"
-            })
-        })
-    })
     }
 
 
@@ -299,3 +241,21 @@ mobile_tag_menu.addEventListener("click", () => {
 mobile_post.addEventListener("click", () => {
     publish.style.display = "block"
 })
+
+const connected_or_not = document.getElementById("post_content")
+let result_of_connection = connected_or_not.getAttribute("value")
+//if(!localStorage.getItem("alerted")){
+//    let alerted = localStorage.setItem("alerted", false)
+//    console.log("bah le truc là : " + alerted)
+//}
+
+if(result_of_connection == "is_not_connected"){
+    connected_or_not.style.filter = "blur(0.2rem)"
+    do_a_post.style.display = "none"
+    //if(alerted === false){
+        setTimeout(() => {
+            alert("Veuillez vous connecter pour accéder au site.")
+        },1000)
+        localStorage.setItem("alerted", true)
+    //}
+}

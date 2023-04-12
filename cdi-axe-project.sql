@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 12 avr. 2023 à 14:38
+-- Généré le : mer. 12 avr. 2023 à 23:24
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `post` (
   `id` int NOT NULL,
-  `content` text COLLATE utf8mb4_general_ci NOT NULL,
-  `tag` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tag` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `thumb_up` int NOT NULL,
   `date` datetime NOT NULL,
   `user_id` int NOT NULL
@@ -41,8 +41,17 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `content`, `tag`, `thumb_up`, `date`, `user_id`) VALUES
-(1, 'ni clé ni portes', 'Base', 0, '2023-04-11 10:32:50', 3),
-(5, 'gbg', 'Anime', 0, '2023-04-11 10:52:22', 3);
+(5, 'gbg', 'Anime', 0, '2023-04-11 10:52:22', 3),
+(7, 'test 2', 'Tech', 0, '2023-04-12 17:46:57', 2),
+(8, 'test', 'Litterature', 0, '2023-04-12 19:10:50', 2),
+(9, 'J\'adore les robots', 'Tech', 0, '2023-04-12 23:01:08', 2),
+(11, 'jh', 'Jeux vidéo', 0, '2023-04-12 23:01:47', 2),
+(12, 'kjkjkkj', 'Culture', 0, '2023-04-12 23:02:09', 2),
+(13, 'fjfj tfjtfjtfjtf', 'Histoire', 0, '2023-04-12 23:02:20', 2),
+(14, 'vskvgsvksur g', 'Cinema', 0, '2023-04-12 23:02:39', 2),
+(15, 'yfyiyf iy', 'Litterature', 0, '2023-04-12 23:02:50', 2),
+(16, ',hgkh gkg', 'Musique', 0, '2023-04-12 23:03:36', 2),
+(17, 'ngcngfcgnfc', 'Sondage', 0, '2023-04-12 23:03:44', 2);
 
 -- --------------------------------------------------------
 
@@ -52,12 +61,12 @@ INSERT INTO `post` (`id`, `content`, `tag`, `thumb_up`, `date`, `user_id`) VALUE
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `prenom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `nom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `pseudo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `mail` text COLLATE utf8mb4_general_ci NOT NULL,
-  `mdp` text COLLATE utf8mb4_general_ci NOT NULL,
-  `profile_picture` text COLLATE utf8mb4_general_ci NOT NULL
+  `prenom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `nom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `pseudo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `mail` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `mdp` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `profile_picture` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -92,7 +101,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `users`

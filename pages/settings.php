@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,11 +19,25 @@
 
             <div class="menu_content">
             
+            <?php
+            if(!isSet($_SESSION["user"])){
+                ?>
                 <div class="profile_picture">
-                    <img class="photo" src="../assets/photos de profile/yugo_TP.jpg" alt="photo de profile">
+                    <img class="photo" src="../assets/photos de profile/not_connected.jpg" alt="photo de profile">
                 </div>
 
-                <p class="username">Quentin</p>
+                <p>Not connected</p>
+                <?php
+                
+                }else{
+                ?>
+                <div class="profile_picture">
+                    <img class="photo" src=<?php echo $_SESSION["user"]["profile_picture"]; ?> alt="photo de profile">
+                </div>
+
+                <p class="username"><?php echo $_SESSION["user"]["pseudo"]; ?></p>
+                <?php
+                }?>
 
                 <div class="gap"></div>
 
