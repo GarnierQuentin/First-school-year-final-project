@@ -5,3 +5,10 @@
 #formulaire_inscription{
     display: none;
 }
+
+@media(max-width : 810px){
+    #account{
+        width: 100vw;
+        min-height: 100vh;
+    }
+}

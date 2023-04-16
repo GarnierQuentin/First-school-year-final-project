@@ -161,11 +161,11 @@ const litterature = document.getElementById("litterature")
 const tech = document.getElementById("tech")
 const musique = document.getElementById("musique")
 const anime = document.getElementById("anime")
-const sondage = document.getElementById("sondage")
+const art = document.getElementById("art")
 
 const clear = document.getElementById("clear")
 
-const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, litterature, tech, musique, anime, sondage]
+const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, litterature, tech, musique, anime, art]
 
 liste_of_selected_tags.forEach(tag_name => {
     tag_name.addEventListener("click", () => {
@@ -207,18 +207,21 @@ const menu = document.querySelector(".menu")
 const tag_page = document.getElementById("tags")
 
 mobile_burger.addEventListener("click", () => {
-    if(menu.style.display == "none"){
-        menu.style.display = "block"
+    menu.classList.toggle("menu-active")
+    menu.classList.toggle("menu")
+    if(menu.className === "menu-active"){
         mobile_tag_menu.style.visibility = "hidden"
         mobile_post.style.visibility = "hidden"
+        document.body.style.overflow = "hidden"
     }
     else{
-        menu.style.display = "none"
         mobile_tag_menu.style.visibility = "visible"
         mobile_post.style.visibility = "visible"
-        general_posts.style.display = "block"
-    }
+        document.body.style.overflow = "unset"
+}
 })
+
+
 
 mobile_tag_menu.addEventListener("click", () => {
     if(tag_page.style.display == "none"){

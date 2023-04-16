@@ -129,6 +129,18 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                     <?php echo $post['content']; ?>
                 </div>
 
+                <?php
+                    if(isSet($post['image'])){ ?>
+                        <div class="post_picture">
+                            <img src="<?php echo "../assets/images/".$post['image']; ?>" alt="photo du post">
+                        </div>
+                    <?php
+                    }?>
+
+                <div class="date">
+                    <?php echo $post['date']?>
+                </div>
+
             </div>
 
             <?php
@@ -197,19 +209,19 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                             <option value="sondage">Sondage</option>
             
                         </select>
-            
-                        <div id="final_submit_part">
-            
-                            <div id="cancel_button">
-                                Annuler
-                            </div>
-            
-                            <div id="submit_button">
-                                <input type="submit" value="Publier" style="background : none; border : none;">
-                            </div>
-            
-                        </div>
                 
+                    </div>
+
+                    <div id="final_submit_part">
+            
+                        <div id="cancel_button">
+                            Annuler
+                        </div>
+        
+                        <div id="submit_button">
+                            <input type="submit" value="Publier" style="background : none; border : none;">
+                        </div>
+        
                     </div>
 
                 </form>
@@ -264,12 +276,12 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <p>Animé</p>
                     </div>
 
-                    <div id="sondage" class="tag_choice">
-                        <p>Sondage</p>
+                    <div id="art" class="tag_choice">
+                        <p>Art</p>
                     </div>
 
                     <div id="clear">
-                        Clear tag(s)
+                        Clear tag
                     </div>
 
                 </div>

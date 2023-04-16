@@ -45,10 +45,23 @@ do_a_post.addEventListener("click", () => {
 let textarea = document.getElementById("content_text_input")
 let text_post = textarea.value
 console.log(text_post)
+let actual_message = ""
+
+
+if(!localStorage.getItem("message_started")){
+    actual_message = localStorage.setItem("message_started", "")
+}
+else{
+    actual_message = localStorage.getItem("message_started")
+    textarea.innerHTML = actual_message
+    console.log("Le texte enregistré : " + localStorage.getItem("message_started"))
+}
 
 textarea.addEventListener("input", () => {
     text_post = textarea.value
     console.log(text_post)
+    actual_message = textarea.value
+    localStorage.setItem("message_started",actual_message)
 })
 
 
@@ -100,8 +113,8 @@ publish_button.addEventListener("click", () => {
     }
 
     else{
-
-    publish.style.display = "none"
+        publish.style.display = "none"
+        localStorage.removeItem("message_started");
     }
 
 
@@ -161,11 +174,11 @@ const litterature = document.getElementById("litterature")
 const tech = document.getElementById("tech")
 const musique = document.getElementById("musique")
 const anime = document.getElementById("anime")
-const sondage = document.getElementById("sondage")
+const art = document.getElementById("art")
 
 const clear = document.getElementById("clear")
 
-const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, litterature, tech, musique, anime, sondage]
+const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, litterature, tech, musique, anime, art]
 
 liste_of_selected_tags.forEach(tag_name => {
     tag_name.addEventListener("click", () => {

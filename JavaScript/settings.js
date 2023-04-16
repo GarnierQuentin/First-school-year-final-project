@@ -4,6 +4,8 @@ const white_theme = document.querySelector('#white_theme')
 const boutons = document.querySelectorAll(".bouton")
 const connection = document.querySelector(".connection")
 
+const mobile_navbar = document.getElementById("mobile_navbar")
+
 if(!localStorage.getItem("actual_theme")){
     let theme = localStorage.setItem("actual_theme", "black")
 }
@@ -32,6 +34,7 @@ white_theme.addEventListener('click', () => {
         element.style.backgroundColor = "grey"
     });
     connection.style.backgroundColor = "grey"
+    mobile_navbar.style.backgroundColor ="grey"
 })
 
 dark_theme.addEventListener('click', () => {
@@ -41,4 +44,31 @@ dark_theme.addEventListener('click', () => {
         element.style.backgroundColor = "whitesmoke"
     });
     connection.style.backgroundColor = "whitesmoke"
+    mobile_navbar.style.backgroundColor ="whitesmoke"
+})
+
+
+
+
+
+//RESPONSIVE PART (MOBILE)
+
+
+const mobile_burger = document.getElementById("burger_menu")
+
+const menu = document.getElementById("menu")
+const tag_page = document.getElementById("tags")
+
+mobile_tag_menu.style.visibility = "hidden"
+mobile_post.style.visibility = "hidden"
+
+mobile_burger.addEventListener("click", () => {
+    menu.classList.toggle("menu-active")
+    menu.classList.toggle("menu")
+    if(menu.className === "menu-active"){
+        document.body.style.overflow = "hidden"
+    }
+    else{
+        document.body.style.overflow = "unset"
+}
 })

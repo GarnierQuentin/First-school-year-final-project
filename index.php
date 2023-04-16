@@ -106,6 +106,12 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             $linked_table = $link->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en format tableau avec un clé et une valeur
 
+            //$files = $_FILES['post_picture'];
+            //echo "Nom : " . $files['name'] . " / ";
+            //echo "Type : " . $files['type'] . " / ";
+            //echo "Taille : " . $files['size'] . " / ";
+            //echo "Tmp : " . $files['tmp_name'];
+
             foreach($posts as $post) {
 
                 foreach($linked_table as $ligne_table) {
@@ -151,6 +157,18 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <?php echo $post['content']; ?>
                     </div>
 
+                    <?php
+                    if(isSet($post['image'])){ ?>
+                        <div class="post_picture">
+                            <img src="<?php echo "assets/images/".$post['image']; ?>" alt="photo du post">
+                        </div>
+                    <?php
+                    }?>
+
+                    <div class="date">
+                        <?php echo $post['date']?>
+                    </div>
+
                 </div>
 
                 <?php
@@ -194,7 +212,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             <div id="publish">
 
-                <form action="proccess/post.php" method="POST">
+                <form action="proccess/post.php" method="POST" enctype="multipart/form-data">
 
                     <div id="text_input">
             
@@ -218,22 +236,27 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                             <option value="Tech">Tech</option>
                             <option value="Musique">Musique</option>
                             <option value="Animé">Animé</option>
-                            <option value="Sondage">Sondage</option>
+                            <option value="Art">Art</option>
             
                         </select>
-            
-                        <div id="final_submit_part">
-            
-                            <div id="cancel_button">
-                                Annuler
-                            </div>
-            
-                            <div id="submit_button">
-                                <input type="submit" value="Publier" style="background : none; border : none;">
-                            </div>
-            
-                        </div>
                 
+                    </div>
+
+                    <div id="media">
+                        <label for="image">Une image ?</label>
+                        <input type="file" name="post_picture" id="image">
+                    </div>
+
+                    <div id="final_submit_part">
+            
+                        <div id="cancel_button">
+                            Annuler
+                        </div>
+        
+                        <div id="submit_button">
+                            <input type="submit" value="Publier" style="background : none; border : none;">
+                        </div>
+        
                     </div>
 
                 </form>
@@ -288,12 +311,12 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <p>Animé</p>
                     </div>
 
-                    <div id="sondage" class="tag_choice">
-                        <p>Sondage</p>
+                    <div id="art" class="tag_choice">
+                        <p>Art</p>
                     </div>
 
                     <div id="clear">
-                        Clear tag(s)
+                        Clear tag
                     </div>
 
                 </div>

@@ -35,3 +35,32 @@
     border-radius: 1000px;
     font-size: 3vw;
 }
+
+@media(max-width : 810px){
+    #reglages{
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    #bloc{
+        font-size: 5vh;
+    }
+
+    #themes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dark_theme{
+        width: 75%;
+        margin-bottom: 10%;
+        font-size: 5vh;
+    }
+
+    #white_theme{
+        width: 75%;
+        margin-bottom: 10%;
+        font-size: 5vh;
+    }
+}

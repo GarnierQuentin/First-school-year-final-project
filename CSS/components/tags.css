@@ -15,7 +15,7 @@
     --tech: #C3FEF1;
     --musique: #ACC5FC;
     --anime: #C2E7FF;
-    --sondage: #EEF8FF;
+    --art: #EEF8FF;
     --transition: all 0.2s;
 }
 
@@ -136,14 +136,14 @@
 
 
 
-#sondage{
-    border: 3px solid var(--sondage);
-    color: var(--sondage);
+#art{
+    border: 3px solid var(--art);
+    color: var(--art);
     transition: var(--transition);
 }
 
-#sondage:hover{
-    background-color: var(--sondage);
+#art:hover{
+    background-color: var(--art);
     transition: var(--transition);
 }
 

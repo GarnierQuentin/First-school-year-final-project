@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 12 avr. 2023 à 23:24
+-- Généré le : dim. 16 avr. 2023 à 21:39
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `post` (
   `id` int NOT NULL,
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `image` text COLLATE utf8mb4_general_ci,
   `tag` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `thumb_up` int NOT NULL,
   `date` datetime NOT NULL,
@@ -40,18 +41,13 @@ CREATE TABLE `post` (
 -- Déchargement des données de la table `post`
 --
 
-INSERT INTO `post` (`id`, `content`, `tag`, `thumb_up`, `date`, `user_id`) VALUES
-(5, 'gbg', 'Anime', 0, '2023-04-11 10:52:22', 3),
-(7, 'test 2', 'Tech', 0, '2023-04-12 17:46:57', 2),
-(8, 'test', 'Litterature', 0, '2023-04-12 19:10:50', 2),
-(9, 'J\'adore les robots', 'Tech', 0, '2023-04-12 23:01:08', 2),
-(11, 'jh', 'Jeux vidéo', 0, '2023-04-12 23:01:47', 2),
-(12, 'kjkjkkj', 'Culture', 0, '2023-04-12 23:02:09', 2),
-(13, 'fjfj tfjtfjtfjtf', 'Histoire', 0, '2023-04-12 23:02:20', 2),
-(14, 'vskvgsvksur g', 'Cinema', 0, '2023-04-12 23:02:39', 2),
-(15, 'yfyiyf iy', 'Litterature', 0, '2023-04-12 23:02:50', 2),
-(16, ',hgkh gkg', 'Musique', 0, '2023-04-12 23:03:36', 2),
-(17, 'ngcngfcgnfc', 'Sondage', 0, '2023-04-12 23:03:44', 2);
+INSERT INTO `post` (`id`, `content`, `image`, `tag`, `thumb_up`, `date`, `user_id`) VALUES
+(133, 'Quand tu dois rendre ton projet de semaine de renfo dans moins d\'1h et qu\'il te manque les posts :', 'panique_y_a_t_il_un_pilote_dans_l_avion.gif', 'Tech', 0, '2023-04-16 21:20:52', 2),
+(134, 'Je crois faut faire des posts pour qu\'Alexis puisse tester les tags après...', NULL, 'Art', 0, '2023-04-16 21:22:31', 3),
+(136, 'Téma les stats', 'record de tout sur Paladins.png', 'JeuxVidéo', 0, '2023-04-16 21:27:25', 3),
+(138, 'Quand je vois Thomas dans le même groupe que moi :', 'spider_thomas.png', 'Culture', 0, '2023-04-16 21:30:54', 2),
+(139, 'En vrai il est trop beau mon Papyrus !', 'Sans titre.png', 'Art', 0, '2023-04-16 21:32:31', 4),
+(141, 'Quand tu te rend compte que y a la date complète sous les posts avec H-2 (il est actuellement 23h36)', 'chaleur-sweating.gif', 'Sport', 0, '2023-04-16 21:36:47', 2);
 
 -- --------------------------------------------------------
 
@@ -75,7 +71,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `prenom`, `nom`, `pseudo`, `mail`, `mdp`, `profile_picture`) VALUES
 (2, 'Quentin', 'Garnier', 'Finex', 'garnierquentin92320@gmail.com', '$2y$10$6792UhAJrYpLWJEf1hC5yOAM.Qn25342saiV2GhEEbzsib3BGmlVm', 'https://fastly.picsum.photos/id/670/200/200.jpg?hmac=r8TCUI8W_ykYaZnXA3SXAoh2eXVWEefFjjZ2VsLJBXg'),
-(3, 'Jean', 'Guuaannew0.7', 'CannaJ', 'bblblblblblbl@bl.sk', '$2y$10$SYIdLRNOkYEt98mr0/StPuczpUZvQoayqr74V9489hOo/7Ek03O9u', 'https://fastly.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg');
+(3, 'Jean', 'Guuaannew0.7', 'CannaJ', 'bblblblblblbl@bl.sk', '$2y$10$SYIdLRNOkYEt98mr0/StPuczpUZvQoayqr74V9489hOo/7Ek03O9u', 'https://fastly.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg'),
+(4, 'Jean', 'Paul', 'JP', 'jp@gmail.com', '$2y$10$5vj4Sl88Pscppmf4sPQeT.Wgl1VwayI828zi9MwaygVUfVqwI7Etm', 'https://img.freepik.com/photos-gratuite/jetee-au-bord-lac-hallstatt-autriche_181624-44201.jpg');
 
 --
 -- Index pour les tables déchargées
@@ -101,13 +98,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

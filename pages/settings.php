@@ -15,7 +15,7 @@ session_start();
 
     <div id="settings">
 
-        <div class="menu">
+        <div id="menu" class="menu">
 
             <div class="menu_content">
             
