@@ -1,42 +1,153 @@
-#Sport{
-    background-color: #FBABD6;
+#tag_text{
+    height: 8.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#Culture{
-    background-color: #FC93A6;
+:root{
+    --sport: #FBABD6;
+    --culture: #FC93A6;
+    --video_game: #FEAE85;
+    --histoire: #FFD2C1;
+    --cinema: #46EAB0;
+    --litterature: #5BC7D0;
+    --tech: #C3FEF1;
+    --musique: #ACC5FC;
+    --anime: #C2E7FF;
+    --sondage: #EEF8FF;
+    --transition: all 0.2s;
 }
+
+#sport{
+    border: 3px solid var(--sport);
+    color: var(--sport);
+    transition: var(--transition);
+}
+
+#sport:hover{
+    background-color: var(--sport);
+    transition: var(--transition);
+}
+
+
+
+#culture{
+    border: 3px solid var(--culture);
+    color: var(--culture);
+    transition: var(--transition);
+}
+
+#culture:hover{
+    background-color: var(--culture);
+    transition: var(--transition);
+}
+
+
 
 #video_game{
-    background-color: #FEAE85;
+    border: 3px solid var(--video_game);
+    color: var(--video_game);
+    transition: var(--transition);
 }
 
-#Histoire{
-    background-color: #FFD2C1;
+#video_game:hover{
+    background-color: var(--video_game);
+    transition: var(--transition);
 }
 
-#Cinema{
-    background-color: #46EAB0;
+
+
+#histoire{
+    border: 3px solid var(--histoire);
+    color: var(--histoire);
+    transition: var(--transition);
 }
 
-#Litterature{
-    background-color: #5BC7D0;
+#histoire:hover{
+    background-color: var(--histoire);
+    transition: var(--transition);
 }
 
-#Tech{
-    background-color: #C3FEF1;
+
+
+#cinema{
+    border: 3px solid var(--cinema);
+    color: var(--cinema);
+    transition: var(--transition);
 }
 
-#Musique{
-    background-color: #ACC5FC;
+#cinema:hover{
+    background-color: var(--cinema);
+    transition: var(--transition);
 }
 
-#Anime{
-    background-color: #C2E7FF;
+
+
+#litterature{
+    border: 3px solid var(--litterature);
+    color: var(--litterature);
+    transition: var(--transition);
 }
 
-#Sondage{
-    background-color: #EEF8FF;
+#litterature:hover{
+    background-color: var(--litterature);
+    transition: var(--transition);
 }
+
+
+
+#tech{
+    border: 3px solid var(--tech);
+    color: var(--tech);
+    transition: var(--transition);
+}
+
+#tech:hover{
+    background-color: var(--tech);
+    transition: var(--transition);
+}
+
+
+
+#musique{
+    border: 3px solid var(--musique);
+    color: var(--musique);
+    transition: var(--transition);
+}
+
+#musique:hover{
+    background-color: var(--musique);
+    transition: var(--transition);
+}
+
+
+
+#anime{
+    border: 3px solid var(--anime);
+    color: var(--anime);
+    transition: var(--transition);
+}
+
+#anime:hover{
+    background-color: var(--anime);
+    transition: var(--transition);
+}
+
+
+
+#sondage{
+    border: 3px solid var(--sondage);
+    color: var(--sondage);
+    transition: var(--transition);
+}
+
+#sondage:hover{
+    background-color: var(--sondage);
+    transition: var(--transition);
+}
+
+
 
 #clear{
     background-color: black;
@@ -44,28 +155,45 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
     border: 3px solid whitesmoke;
-    border-radius: 100px;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    border-radius: 50px;
+    height: 10vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tag_choice{
     width: 75%;
+    border-radius: 100px;
+    margin-bottom: 2vh;
+    height: 5.7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid black;
-    border-radius: 100px;
-    margin-top: 2vh;
-    height: 50%;
+}
+
+.tag_choice:hover{
+    border: 3px solid black !important;
+    color: black !important;
+    transition: var(--transition);
 }
 
 @media(max-width : 810px){
+    #tag_text{
+        height: 7vh;
+    }
+    
     .tag_choice{
-        border: 5px solid black;
-        margin-top: 3vh;
-        padding-top: 3%;
-        padding-bottom: 3%;
+        height: 5vh;
+        width: 60%;
+    }
+
+    #clear{
+        height: 9vh;
+        width: 60%;
     }
 }

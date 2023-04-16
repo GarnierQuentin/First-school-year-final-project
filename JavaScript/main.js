@@ -152,16 +152,16 @@ if(theme === "white"){
     connection.style.backgroundColor = "grey"
 }
 
-const sport = document.getElementById("Sport")
-const culture = document.getElementById("Culture")
+const sport = document.getElementById("sport")
+const culture = document.getElementById("culture")
 const video_game = document.getElementById("video_game")
-const histoire = document.getElementById("Histoire")
-const cinema = document.getElementById("Cinema")
-const litterature = document.getElementById("Litterature")
-const tech = document.getElementById("Tech")
-const musique = document.getElementById("Musique")
-const anime = document.getElementById("Anime")
-const sondage = document.getElementById("Sondage")
+const histoire = document.getElementById("histoire")
+const cinema = document.getElementById("cinema")
+const litterature = document.getElementById("litterature")
+const tech = document.getElementById("tech")
+const musique = document.getElementById("musique")
+const anime = document.getElementById("anime")
+const sondage = document.getElementById("sondage")
 
 const clear = document.getElementById("clear")
 
@@ -176,7 +176,6 @@ liste_of_selected_tags.forEach(tag_name => {
             actual_post.style.display = "block"
             if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){ //.trim() efface les espaces inutiles qui faisaient rater la condition
                 actual_post.style.display = "none"
-                actual_post.style.backgroundColor = tag_name.style.backgroundColor
             }
         });
     })
@@ -203,23 +202,25 @@ const mobile_burger = document.getElementById("burger_menu")
 const mobile_tag_menu = document.getElementById("mobile_tag_menu")
 const mobile_post = document.getElementById("mobile_post")
 
-const menu = document.querySelector(".menu")
+const menu = document.getElementById("menu")
 const tag_page = document.getElementById("tags")
 
 mobile_burger.addEventListener("click", () => {
-    if(menu.style.display == "none"){
-        menu.style.display = "block"
+    menu.classList.toggle("menu-active")
+    menu.classList.toggle("menu")
+    if(menu.className === "menu-active"){
         mobile_tag_menu.style.visibility = "hidden"
         mobile_post.style.visibility = "hidden"
-        general_posts.style.display = "none"
+        document.body.style.overflow = "hidden"
     }
     else{
-        menu.style.display = "none"
         mobile_tag_menu.style.visibility = "visible"
         mobile_post.style.visibility = "visible"
-        general_posts.style.display = "block"
-    }
+        document.body.style.overflow = "unset"
+}
 })
+
+
 
 mobile_tag_menu.addEventListener("click", () => {
     if(tag_page.style.display == "none"){

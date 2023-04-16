@@ -1,14 +1,14 @@
 ajouter les dates et peut etre les likes sur les posts
 
 
-faire les filtres (aménager en PHP ?)
+faire les filtres
 |_ voir le problèe sur le tag "Sport" + "JeuxVidéo" + "Cinéma" + "Littérature" + "Anime"
 
 
 faire des animations quand on rentre sur le site
 
 
-adapter le CSS aprce que là ça va vraiment pas
+adapter le CSS aprce que là ça va vraiment pas (les couleurs sont pas belles)
 
 
 faire le reponsive en mode tel et checker les breakpoints

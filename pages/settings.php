@@ -46,6 +46,12 @@ session_start();
                         Feed
                     </div>
                 </a>
+
+                <a href="profile.php">
+                    <div class="bouton">
+                        Feed
+                    </div>
+                </a>
                 
                 <div class="clicked">
                     Settings

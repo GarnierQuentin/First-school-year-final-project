@@ -11,12 +11,14 @@
 
 .menu_content{
     position: sticky;
+    opacity: 100%;
     top: 3%;
 }
 
 #tags_content{
     position: sticky;
-    top: 3%;
+    height: 100vh;
+    top: 0%;
 }
 
 #posts{
@@ -41,20 +43,50 @@
 
     .menu{
         box-shadow: none;
-        display: none;
-        animation: left_slide 1s;
+        width: 100%;
+        background-color: rgb(52, 52, 52);
+        position: fixed;
+        left:-100% ;
+        transition: left .4s;
+        display: block;
+        height: 100vh;
+        top: 0;
     }
 
-    @keyframes left_slide {
+    .menu-active{
+        left: 0;
+        z-index: 1;
+        box-shadow: none;
+        width: 100%;
+        background-color: rgb(52, 52, 52);
+        position: fixed;
+        transition: left .4s;
+        display: block;
+        height: 100vh;
+        top: 0;
+    }
+
+    /* @keyframes left_slide {
         from {
             transform: translate3d(-100%, 0, 0);
-            visibility: visible;
           }
         
           to {
             transform: translate3d(0, 0, 0);
           }
         }
+
+    @keyframes left_slide_out {
+        from {
+            transform: translate3d(0, 0, 0);
+            display: block;
+            }
+        
+            to {
+            transform: translate3d(-100%, 0, 0);
+            display: none;
+            }
+        } */
 
     #tags{
         box-shadow: none;
@@ -63,11 +95,12 @@
 
     #mobile_navbar{
         display: flex;
-        position: sticky;
+        position: fixed;
         bottom: 0%;
         justify-content: space-around;
         background-color: whitesmoke;
         padding: 2%;
+        z-index: 2;
     }
 
     .mobile_sidebar{

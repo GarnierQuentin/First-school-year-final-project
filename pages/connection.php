@@ -63,7 +63,7 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
 
                 <div class="d-flex justify-content-evenly m-3 align-items-center">
 
-                    <button type="button" class="btn btn-outline-primary">Connexion</button>
+                    <button type="button" class="btn btn-outline-primary btn-custom">Connexion</button>
 
                     <button type="button" class="btn btn-outline-info">Inscription</button>
 

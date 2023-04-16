@@ -1,10 +1,10 @@
 #do_a_post{
-    position: sticky;
+    position: fixed;
     background-color: white;
     border-radius: 1000px;
-    width: 5vw;
-    height: 5vw;
-    padding: 3%;
+    width: 7vw;
+    height: 7vw;
+    padding: 1.5%;
     bottom: 1%;
     left: 70%;
 }

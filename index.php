@@ -22,7 +22,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
     <div id="main">
         
-        <div class="menu">
+        <div id="menu" class="menu">
 
             <div class="menu_content">
             
@@ -133,11 +133,12 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
                         <div class="trash" id=<?php echo $post["id"]; ?>>
                             <?php
-                            if($_SESSION['id'] == $post['user_id']){ //si le post appartient à l'utilisateur connecté
-                            ?>
-                                <img src="assets/icones/poubelle.png" alt="bouton de suppression de post">
-                            <?php
-                            }?>
+                            if(isSet($_SESSION["id"])){
+                                if($_SESSION['id'] == $post['user_id']){ //si le post appartient à l'utilisateur connecté
+                                ?>
+                                    <img src="assets/icones/poubelle.png" alt="bouton de suppression de post">
+                                <?php
+                                }}?>
                         </div>
 
                     </div>
@@ -154,9 +155,11 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
                 <?php
 
-            }
-            
-            ?>
+                }
+                
+                ?>
+
+                <div class="gap"></div>
                 
             </div>
 
@@ -208,13 +211,13 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                             <option value="">Choisissez un tag</option>
                             <option value="Sport">Sport</option>
                             <option value="Culture">Culture</option>
-                            <option value="Jeux vidéo">JeuxVidéo</option>
+                            <option value="JeuxVidéo">JeuxVidéo</option>
                             <option value="Histoire">Histoire</option>
-                            <option value="Cinema">Cinéma</option>
-                            <option value="Litterature">Littérature</option>
+                            <option value="Cinéma">Cinéma</option>
+                            <option value="Littérature">Littérature</option>
                             <option value="Tech">Tech</option>
                             <option value="Musique">Musique</option>
-                            <option value="Anime">Animé</option>
+                            <option value="Animé">Animé</option>
                             <option value="Sondage">Sondage</option>
             
                         </select>
@@ -249,11 +252,11 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
                 <div id="all_tags">
                     
-                    <div id="Sport" class="tag_choice">
+                    <div id="sport" class="tag_choice">
                         <p>Sport</p>
                     </div>
 
-                    <div id="Culture" class="tag_choice">
+                    <div id="culture" class="tag_choice">
                         <p>Culture</p>
                     </div>
 
@@ -261,31 +264,31 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <p>JeuxVidéo</p>
                     </div>
 
-                    <div id="Histoire" class="tag_choice">
+                    <div id="histoire" class="tag_choice">
                         <p>Histoire</p>
                     </div>
 
-                    <div id="Cinema" class="tag_choice">
+                    <div id="cinema" class="tag_choice">
                         <p>Cinéma</p>
                     </div>
 
-                    <div id="Litterature" class="tag_choice">
+                    <div id="litterature" class="tag_choice">
                         <p>Littérature</p>
                     </div>
 
-                    <div id="Tech" class="tag_choice">
+                    <div id="tech" class="tag_choice">
                         <p>Tech</p>
                     </div>
 
-                    <div id="Musique" class="tag_choice">
+                    <div id="musique" class="tag_choice">
                         <p>Musique</p>
                     </div>
 
-                    <div id="Anime" class="tag_choice">
+                    <div id="anime" class="tag_choice">
                         <p>Animé</p>
                     </div>
 
-                    <div id="Sondage" class="tag_choice">
+                    <div id="sondage" class="tag_choice">
                         <p>Sondage</p>
                     </div>
 
