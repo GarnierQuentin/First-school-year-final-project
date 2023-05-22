@@ -6,16 +6,16 @@
 }
 
 :root{
-    --sport: #FBABD6;
-    --culture: #FC93A6;
-    --video_game: #FEAE85;
-    --histoire: #FFD2C1;
-    --cinema: #46EAB0;
-    --litterature: #5BC7D0;
-    --tech: #C3FEF1;
-    --musique: #ACC5FC;
-    --anime: #C2E7FF;
-    --art: #EEF8FF;
+    --sport: rgb(251,171,214);
+    --culture: rgb(252,147,166);
+    --video_game: rgb(254,174,133);
+    --histoire: rgb(255,210,193);
+    --cinema: rgb(70,234,176);
+    --litterature: rgb(91,199,208);
+    --tech: rgb(195,254,241);
+    --musique: rgb(172,197,252);
+    --anime: rgb(194,231,255);
+    --art: rgb(238,248,255);
     --transition: all 0.2s;
 }
 
