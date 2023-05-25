@@ -22,7 +22,7 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
 
     <div id="settings">
 
-        <div class="menu">
+        <nav class="menu">
 
             <div class="menu_content">
             
@@ -55,9 +55,9 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
 
             </div>
 
-        </div>
+        </nav>
 
-        <div id="account">
+        <main id="account">
 
             <div id="choix_formulaires">
 
@@ -91,7 +91,7 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
                             <input type="password" class="form-control" id="exampleInputPassword1" name="mdp">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Go</button>
+                        <button type="submit" class="btn btn-primary btn-custom">Go</button>
 
                         </form>
                 </div>
@@ -142,9 +142,9 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
             <div class="gap"></div>
 
     
-        </div>
+        </main>
 
-        <div id="mobile_navbar">
+        <nav id="mobile_navbar">
 
             <div id="burger_menu" class="mobile_sidebar">
                 <img src="../assets/icones/burger-bar.png" alt="">
@@ -158,7 +158,7 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
                 <img src="../assets/icones/plume-doie.png" alt="">
             </div>
 
-        </div>
+        </nav>
 
     </div>
 

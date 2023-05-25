@@ -28,13 +28,12 @@ if($_POST['content'] != '' && $_POST['tag'] != 'Base'){
 
     $data = [
         'content' => $_POST['content'],
-        'date' => date('Y-m-d H:i:s'),
         'tag' => $_POST['tag'],
         'user_id' => $_SESSION["id"],
         'post_image' => $img
     ];
 
-    $requete = $database->prepare('INSERT INTO post (content, image, tag, thumb_up, date, user_id) VALUES (:content, :post_image, :tag, 0, :date, :user_id)');
+    $requete = $database->prepare('INSERT INTO post (content, image, tag, thumb_up, user_id) VALUES (:content, :post_image, :tag, 0, :user_id)');
     $requete->execute($data);
 
     if($requete) {

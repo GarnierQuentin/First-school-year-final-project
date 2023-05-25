@@ -22,7 +22,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
     <div id="main">
         
-        <div id="menu" class="menu">
+        <nav id="menu" class="menu">
 
             <div class="menu_content">
             
@@ -61,6 +61,13 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         Profile
                     </div>
                 </a>
+
+
+                <a href="pages/pseudo.php">
+                    <div class="bouton">
+                        Users
+                    </div>
+                </a>
                 <?php
                 }?>
                 
@@ -78,9 +85,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             </div>
 
-        </div>
+        </nav>
 
-        <div id="posts">
+        <main id="posts">
 
             <?php
             if(!isSet($_SESSION["user"])){
@@ -100,6 +107,10 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             $requete->execute();
 
             $posts = $requete->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en format tableau avec un clé et une valeur
+
+            $last_post = $posts[0];
+
+            json_encode($last_post);
 
             $link = $database->prepare('SELECT * FROM post INNER JOIN users ON post.user_id = users.id');
             $link->execute();
@@ -121,7 +132,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                     }
                 }?>
 
-                <div class="post">
+                <section class="post">
 
                     <div class="profile">
 
@@ -153,9 +164,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <?php echo "#".$post['tag']; ?>
                     </div>
 
-                    <div class="text">
+                    <article class="text">
                         <?php echo $post['content']; ?>
-                    </div>
+                    </article>
 
                     <?php
                     if(isSet($post['image'])){ ?>
@@ -169,7 +180,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                         <?php echo $post['date']?>
                     </div>
 
-                </div>
+                </section>
 
                 <?php
 
@@ -263,9 +274,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
         
             </div>
 
-        </div>
+        </main>
         
-        <div id="tags">
+        <aside id="tags">
 
             <div id="tags_content">
                 
@@ -323,9 +334,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             </div>
 
-        </div>
+        </aside>
 
-        <div id="mobile_navbar">
+        <nav id="mobile_navbar">
 
             <div id="burger_menu" class="mobile_sidebar">
                 <img src="assets/icones/burger-bar.png" alt="">
@@ -339,7 +350,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                 <img src="assets/icones/plume-doie.png" alt="">
             </div>
 
-        </div>
+        </nav>
  
     </div>
     

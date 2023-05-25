@@ -122,28 +122,6 @@ publish_button.addEventListener("click", () => {
 
 
 
-const removePostByTrash = (trash) => {
-    const profile = trash.parentNode
-    console.log(profile)
-
-    const post = profile.parentNode
-    console.log(post)
-    
-    const nameOfTag = post.querySelector(".nameOfTag")
-
-    const text = post.querySelector(".text")
-
-    const image = post.querySelector(".image")
-
-    post.removeChild(profile)
-    post.removeChild(nameOfTag)
-    post.removeChild(text)
-    post.removeChild(image)
-    post.remove()
-}
-
-
-
 console.log(theme)
 if(theme === "white"){
     clear_button.style.backgroundColor = "whitesmoke"
@@ -182,12 +160,17 @@ const liste_of_selected_tags = [sport, culture, video_game, histoire, cinema, li
 
 liste_of_selected_tags.forEach(tag_name => {
     tag_name.addEventListener("click", () => {
+        const style = getComputedStyle(tag_name)
+        const actual_tag_color = style.backgroundColor
+        console.log("Le CSS du post actuel : " + actual_tag_color)
         const liste_posts = document.querySelectorAll(".post")
         liste_posts.forEach(actual_post => {
             const nameOfTag = actual_post.childNodes[3].textContent
             console.log(`Le tag du poste actuel : ${nameOfTag}`)
             actual_post.style.display = "block"
-            if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){ //.trim() efface les espaces inutiles qui faisaient rater la condition
+            actual_post.style.border = "5px solid " + actual_tag_color
+            if(nameOfTag.trim() != `#${tag_name.textContent.trim()}`){
+                //.trim() efface les espaces inutiles qui faisaient rater la condition
                 actual_post.style.display = "none"
             }
         });
@@ -199,6 +182,7 @@ clear.addEventListener("click", () => {
     liste_posts.forEach(element => {
         element.style.display = "block"
         element.style.backgroundColor = "none"
+        element.style.border = "5px solid black"
     });
 })
 
@@ -273,3 +257,7 @@ if(result_of_connection == "is_not_connected"){
         localStorage.setItem("alerted", true)
     //}
 }
+
+
+let last_tag = document.getElementById("las_tag")
+console.log("Le dernier tag : " + last_tag)

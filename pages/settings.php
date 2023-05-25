@@ -15,7 +15,7 @@ session_start();
 
     <div id="settings">
 
-        <div id="menu" class="menu">
+        <nav id="menu" class="menu">
 
             <div class="menu_content">
             
@@ -66,11 +66,11 @@ session_start();
 
             </div>
 
-        </div>
+        </nav>
 
 
 
-        <div id="reglages">
+        <main id="reglages">
 
             <div id="bloc">
         
@@ -86,9 +86,9 @@ session_start();
 
             </div>
 
-        </div>
+        </main>
 
-        <div id="mobile_navbar">
+        <nav id="mobile_navbar">
 
             <div id="burger_menu" class="mobile_sidebar">
                 <img src="../assets/icones/burger-bar.png" alt="">
@@ -102,7 +102,7 @@ session_start();
                 <img src="../assets/icones/plume-doie.png" alt="">
             </div>
 
-        </div>
+        </nav>
 
     </div>
 

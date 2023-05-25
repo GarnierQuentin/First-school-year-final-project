@@ -22,7 +22,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
     <div id="main">
         
-        <div class="menu">
+        <nav class="menu">
 
             <div class="menu_content">
             
@@ -58,9 +58,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             </div>
 
-        </div>
+        </nav>
 
-        <div id="posts">
+        <main id="posts">
 
             <?php
             if(!isSet($_SESSION["user"])){
@@ -93,61 +93,61 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             foreach($posts as $post) {
             ?>
 
-            <div class="post">
+                <section class="post">
 
-                <div class="profile">
+                    <div class="profile">
 
-                    <div class="identity">
+                        <div class="identity">
 
-                        <div class="mini_profile_picture">
-                            <img class="photo" src=<?php echo $the_user_table[0]["profile_picture"]; ?> alt="mini photo de profile">
+                            <div class="mini_profile_picture">
+                                <img class="photo" src=<?php echo $the_user_table[0]["profile_picture"]; ?> alt="mini photo de profile">
+                            </div>
+
+                            <div class="username">
+                            <?php echo $the_user_table[0]["pseudo"]; ?>
+                            </div>
+
                         </div>
 
-                        <div class="username">
-                        <?php echo $the_user_table[0]["pseudo"]; ?>
-                        </div>
-
-                    </div>
-
-                    <div class="trash" id=<?php echo $post["id"]; ?>>
-                        <?php
-                        if(isSet($_SESSION["id"])){
-                            if($_SESSION['id'] == $post['user_id']){ //si le post appartient à l'utilisateur connecté
-                            ?>
-                                <img src="../assets/icones/poubelle.png" alt="bouton de suppression de post">
+                        <div class="trash" id=<?php echo $post["id"]; ?>>
                             <?php
-                            }}?>
+                            if(isSet($_SESSION["id"])){
+                                if($_SESSION['id'] == $post['user_id']){ //si le post appartient à l'utilisateur connecté
+                                ?>
+                                    <img src="../assets/icones/poubelle.png" alt="bouton de suppression de post">
+                                <?php
+                                }}?>
+                        </div>
+
                     </div>
 
-                </div>
+                    <div class="nameOfTag">
+                        <?php echo "#".$post['tag']; ?>
+                    </div>
 
-                <div class="nameOfTag">
-                    <?php echo "#".$post['tag']; ?>
-                </div>
+                    <article class="text">
+                        <?php echo $post['content']; ?>
+                    </article>
 
-                <div class="text">
-                    <?php echo $post['content']; ?>
-                </div>
+                    <?php
+                        if(isSet($post['image'])){ ?>
+                            <div class="post_picture">
+                                <img src="<?php echo "../assets/images/".$post['image']; ?>" alt="photo du post">
+                            </div>
+                        <?php
+                        }?>
+
+                    <div class="date">
+                        <?php echo $post['date']?>
+                    </div>
+
+                    </section>
 
                 <?php
-                    if(isSet($post['image'])){ ?>
-                        <div class="post_picture">
-                            <img src="<?php echo "../assets/images/".$post['image']; ?>" alt="photo du post">
-                        </div>
-                    <?php
-                    }?>
 
-                <div class="date">
-                    <?php echo $post['date']?>
-                </div>
-
-            </div>
-
-            <?php
-
-            }
-            
-            ?>
+                }
+                
+                ?>
                 
             </div>
 
@@ -228,9 +228,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
         
             </div>
 
-        </div>
+        </main>
         
-        <div id="tags">
+        <aside id="tags">
 
             <div id="tags_content">
                 
@@ -288,9 +288,9 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
 
             </div>
 
-        </div>
+        </aside>
 
-        <div id="mobile_navbar">
+        <nav id="mobile_navbar">
 
             <div id="burger_menu" class="mobile_sidebar">
                 <img src="../assets/icones/burger-bar.png" alt="">
@@ -304,7 +304,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                 <img src="../assets/icones/plume-doie.png" alt="">
             </div>
 
-        </div>
+        </nav>
  
     </div>
     
