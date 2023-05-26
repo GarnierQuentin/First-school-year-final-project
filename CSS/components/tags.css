@@ -162,6 +162,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1,1);
+    transition: 0.1s linear;
+}
+
+#clear:hover{
+    transform: scale(1.1,1.1);
+    transition: 0.1s linear;
 }
 
 .tag_choice{

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : dim. 16 avr. 2023 à 21:39
+-- Généré le : ven. 26 mai 2023 à 20:56
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `post` (
   `id` int NOT NULL,
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `image` text COLLATE utf8mb4_general_ci,
+  `image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `tag` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `thumb_up` int NOT NULL,
-  `date` datetime NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -47,7 +47,21 @@ INSERT INTO `post` (`id`, `content`, `image`, `tag`, `thumb_up`, `date`, `user_i
 (136, 'Téma les stats', 'record de tout sur Paladins.png', 'JeuxVidéo', 0, '2023-04-16 21:27:25', 3),
 (138, 'Quand je vois Thomas dans le même groupe que moi :', 'spider_thomas.png', 'Culture', 0, '2023-04-16 21:30:54', 2),
 (139, 'En vrai il est trop beau mon Papyrus !', 'Sans titre.png', 'Art', 0, '2023-04-16 21:32:31', 4),
-(141, 'Quand tu te rend compte que y a la date complète sous les posts avec H-2 (il est actuellement 23h36)', 'chaleur-sweating.gif', 'Sport', 0, '2023-04-16 21:36:47', 2);
+(141, 'Quand tu te rend compte que y a la date complète sous les posts avec H-2 (il est actuellement 23h36)', 'chaleur-sweating.gif', 'Sport', 0, '2023-04-16 21:36:47', 2),
+(142, 'Go tester la led', NULL, 'Cinéma', 0, '2023-05-03 13:12:30', 2),
+(143, 'Trop fier d\'avoir gagné la compétition', NULL, 'Sport', 0, '2023-05-03 13:13:17', 2),
+(152, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-04 14:36:13', 5),
+(153, 'Overwatch', NULL, 'JeuxVidéo', 0, '2023-05-04 14:38:07', 2),
+(154, 'Picasso', NULL, 'Art', 0, '2023-05-04 14:38:31', 2),
+(155, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-04 14:39:01', 5),
+(159, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-22 14:24:05', 5),
+(161, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-22 14:25:04', 5),
+(162, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-22 14:25:08', 5),
+(163, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-22 14:25:10', 5),
+(164, 'Message automatique fait par mon créateur', NULL, 'Tech', 0, '2023-05-22 14:25:11', 5),
+(167, 'Go tester si l\'heure marche mtn ...', NULL, 'Culture', 0, '2023-05-25 08:02:33', 4),
+(168, 'On teste une deuxième fois :', NULL, 'Culture', 0, '2023-05-25 10:05:19', 4),
+(169, 'let\'s go ça marche !!!', NULL, 'Histoire', 0, '2023-05-25 10:05:34', 4);
 
 -- --------------------------------------------------------
 
@@ -72,7 +86,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `prenom`, `nom`, `pseudo`, `mail`, `mdp`, `profile_picture`) VALUES
 (2, 'Quentin', 'Garnier', 'Finex', 'garnierquentin92320@gmail.com', '$2y$10$6792UhAJrYpLWJEf1hC5yOAM.Qn25342saiV2GhEEbzsib3BGmlVm', 'https://fastly.picsum.photos/id/670/200/200.jpg?hmac=r8TCUI8W_ykYaZnXA3SXAoh2eXVWEefFjjZ2VsLJBXg'),
 (3, 'Jean', 'Guuaannew0.7', 'CannaJ', 'bblblblblblbl@bl.sk', '$2y$10$SYIdLRNOkYEt98mr0/StPuczpUZvQoayqr74V9489hOo/7Ek03O9u', 'https://fastly.picsum.photos/id/455/200/200.jpg?hmac=YZhCbBjCYF0ha5dR9ElToDVwWcw05w0e4pAv5S9nZYg'),
-(4, 'Jean', 'Paul', 'JP', 'jp@gmail.com', '$2y$10$5vj4Sl88Pscppmf4sPQeT.Wgl1VwayI828zi9MwaygVUfVqwI7Etm', 'https://img.freepik.com/photos-gratuite/jetee-au-bord-lac-hallstatt-autriche_181624-44201.jpg');
+(4, 'Jean', 'Paul', 'JP', 'jp@gmail.com', '$2y$10$5vj4Sl88Pscppmf4sPQeT.Wgl1VwayI828zi9MwaygVUfVqwI7Etm', 'https://img.freepik.com/photos-gratuite/jetee-au-bord-lac-hallstatt-autriche_181624-44201.jpg'),
+(5, 'Bot', 'Bot', 'Bot', 'Bot@gmail.com', '$2y$10$AbSmSqLGoQL2lUv8/lrknO06BJ2qooCLfdktK4rv9SM/H5uNrxK8.', 'https://creazilla-store.fra1.digitaloceanspaces.com/emojis/58440/robot-emoji-clipart-md.png');
 
 --
 -- Index pour les tables déchargées
@@ -98,13 +113,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

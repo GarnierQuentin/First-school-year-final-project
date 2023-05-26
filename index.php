@@ -30,7 +30,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                 if(!isSet($_SESSION["user"])){
                 ?>
                 <div class="profile_picture">
-                    <img class="photo" src="assets/photos de profile/not_connected.jpg" alt="photo de profile">
+                    <img class="photo" src="assets/photos_de_profile/not_connected.jpg" alt="photo de profile">
                 </div>
 
                 <p>Not connected</p>
@@ -98,7 +98,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             }
             ?>
 
-            <div id="post_content" value=<?php echo $connected; ?>>
+            <input id="post_content" type="hidden" value=<?php echo $connected; ?> >
 
             <?php
 
@@ -188,9 +188,8 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                 
                 ?>
 
-                <div class="gap"></div>
+            <div class="gap"></div>
                 
-            </div>
 
             <div id="delet">
 
@@ -281,7 +280,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             <div id="tags_content">
                 
                 <div id="tag_text">
-                    <b><p>TAGS</p></b>
+                    <p><b>TAGS</b></p>
                 </div>
 
                 <div id="all_tags">

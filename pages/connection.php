@@ -27,7 +27,7 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
             <div class="menu_content">
             
                 <div class="profile_picture">
-                    <img class="photo" src="../assets/photos de profile/not_connected.jpg" alt="photo de profile">
+                    <img class="photo" src="../assets/photos_de_profile/not_connected.jpg" alt="photo de profile">
                 </div>
 
                 <p class="username">Not connected</p>
@@ -83,12 +83,12 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
 
                         <div class="mb-2">
                             <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail">
+                            <input type="email" class="form-control bootstrap_button" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail">
                         </div>
 
                         <div class="mb-2">
                             <label for="exampleInputPassword1" class="form-label">Mot de passse</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" name="mdp">
+                            <input type="password" class="form-control bootstrap_button" id="exampleInputPassword1" name="mdp">
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-custom">Go</button>
@@ -105,32 +105,32 @@ if(isSet($_SESSION["user"]) and isSet($_SESSION["id"])){
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Prénom ?</label>
-                            <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="prenom">
+                            <input type="text" class="form-control bootstrap_button" id="exampleInputEmail2" aria-describedby="emailHelp" name="prenom">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Nom ?</label>
-                            <input type="text" class="form-control" id="exampleInputPassword2" name="nom">
+                            <input type="text" class="form-control exampleInputPassword2 bootstrap_button" name="nom">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Pseudo ?</label>
-                            <input type="text" class="form-control" id="exampleInputPassword2" name="pseudo">
+                            <input type="text" class="form-control exampleInputPassword2 bootstrap_button" name="pseudo">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Adresse mail ?</label>
-                            <input type="email" class="form-control" id="exampleInputPassword2" name="mail">
+                            <input type="email" class="form-control exampleInputPassword2 bootstrap_button" name="mail">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Mot de passe ?</label>
-                            <input type="password" class="form-control" id="exampleInputPassword2" name="mdp">
+                            <input type="password" class="form-control exampleInputPassword2 bootstrap_button" name="mdp">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Lien d'une photo de profile ?</label>
-                            <input type="url" class="form-control" id="exampleInputPassword2" name="profile_picture">
+                            <input type="url" class="form-control exampleInputPassword2 bootstrap_button" name="profile_picture">
                         </div>
 
                         <button type="submit" class="btn btn-primary">Envoyer</button>

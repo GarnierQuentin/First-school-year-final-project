@@ -23,7 +23,7 @@ session_start();
             if(!isSet($_SESSION["user"])){
                 ?>
                 <div class="profile_picture">
-                    <img class="photo" src="../assets/photos de profile/not_connected.jpg" alt="photo de profile">
+                    <img class="photo" src="../assets/photos_de_profile/not_connected.jpg" alt="photo de profile">
                 </div>
 
                 <p>Not connected</p>
@@ -47,11 +47,24 @@ session_start();
                     </div>
                 </a>
 
-                <a href="profile.php">
+                <?php
+                if(isSet($_SESSION["user"])){
+                ?>
+                    <a href="profile.php">
+                        <div class="bouton">
+                            Profile
+                        </div>
+                    </a>
+
+                    <a href="../pages/pseudo.php">
                     <div class="bouton">
-                        Feed
+                        Users
                     </div>
-                </a>
+                    </a>
+
+                <?php
+                }
+                ?>
                 
                 <div class="clicked">
                     Settings

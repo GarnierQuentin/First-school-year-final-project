@@ -44,6 +44,12 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                     Profile
                 </div>
                 
+                <a href="pseudo.php">
+                    <div class="bouton">
+                        Users
+                    </div>
+                </a>
+
                 <a href="settings.php">
                     <div class="bouton">
                         Settings
@@ -71,7 +77,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             }
             ?>
 
-            <div id="post_content" value=<?php echo $connected; ?>>
+            <input id="post_content" type="hidden" value=<?php echo $connected; ?> >
 
             <?php
 
@@ -149,7 +155,6 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
                 
                 ?>
                 
-            </div>
 
             <div id="delet">
 
@@ -235,7 +240,7 @@ $all_users = $users->fetchAll(PDO::FETCH_ASSOC); //le résultat est stocké en f
             <div id="tags_content">
                 
                 <div id="tag_text">
-                    <b><p>TAGS</p></b>
+                    <p><b>TAGS</b></p>
                 </div>
 
                 <div id="all_tags">

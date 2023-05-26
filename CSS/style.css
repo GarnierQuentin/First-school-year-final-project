@@ -9,6 +9,8 @@
 @import url(components/delet.css);
 @import url(components/publish.css);
 @import url(components/connection.css);
+@import url(components/search.css);
+@import url(components/bootstrap.css);
 
 *{
     padding: 0%;

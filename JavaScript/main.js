@@ -242,13 +242,15 @@ mobile_post.addEventListener("click", () => {
 
 const connected_or_not = document.getElementById("post_content")
 let result_of_connection = connected_or_not.getAttribute("value")
+console.log("la conncetion : ")
+console.log(result_of_connection)
 //if(!localStorage.getItem("alerted")){
 //    let alerted = localStorage.setItem("alerted", false)
 //    console.log("bah le truc là : " + alerted)
 //}
 
 if(result_of_connection == "is_not_connected"){
-    connected_or_not.style.filter = "blur(0.2rem)"
+    general_posts.style.filter = "blur(0.2rem)"
     do_a_post.style.display = "none"
     //if(alerted === false){
         setTimeout(() => {
